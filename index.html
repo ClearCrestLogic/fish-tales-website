@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fish Tales&#8482; — Capture, Log & Share Every Catch</title>
+  <meta name="description" content="Fish Tales™ is the fishing diary that lives in your pocket. Capture your catches, build your Trophy Wall, track your Reel Stats, and share with friends. Free forever." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="images/icon-cyan.webp" />
+
+  <!-- Theme color (Android Chrome browser bar) -->
+  <meta name="theme-color" content="#001B2E" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://getfishtales.com/" />
+
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getfishtales.com/" />
+  <meta property="og:title" content="Fish Tales™ — Capture, Log & Share Every Catch" />
+  <meta property="og:description" content="Fish Tales™ is the fishing diary that lives in your pocket. Capture your catches, build your Trophy Wall, track your Reel Stats, and share with friends. Free forever." />
+  <meta property="og:image" content="https://getfishtales.com/images/screenshot-home.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fish Tales™ — Capture, Log & Share Every Catch" />
+  <meta name="twitter:description" content="Fish Tales™ is the fishing diary that lives in your pocket. Capture your catches, build your Trophy Wall, track your Reel Stats, and share with friends. Free forever." />
+  <meta name="twitter:image" content="https://getfishtales.com/images/screenshot-home.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Apple Smart Banner — prompts iOS Safari users to download the app -->
+  <meta name="apple-itunes-app" content="app-id=PLACEHOLDER" />
+
+  <!-- JSON-LD Structured Data — helps Google understand this is an app listing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Fish Tales™",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "LifestyleApplication",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "description": "Unlimited catch logging, 1 photo per catch, last 90 days of history, full social and sharing features. Free forever.",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro",
+        "description": "Full catch history, up to 10 photos per catch, complete Reel Stats, date range filter, and CSV export. $4.99/month or $39.99/year.",
+        "price": "4.99",
+        "priceCurrency": "USD"
+      }
+    ],
+    "description": "Fish Tales™ is the fishing diary that lives in your pocket. Capture your catches, build your Trophy Wall, track your Reel Stats, and share with friends.",
+    "url": "https://getfishtales.com",
+    "publisher": {
+      "@type": "Organization",
+      "name": "ClearCrest Logic, LLC"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Skip navigation — accessibility for keyboard users -->
+  <a href="#features" class="skip-nav">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/icon-cyan.webp" alt="Fish Tales™" class="nav-icon" />
+        <span class="nav-logo-text">Fish <span>Tales</span><sup>™</sup></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#screenshots">Screenshots</a></li>
+        <li><a href="#stats">Reel Stats</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#download" class="nav-cta">Download</a></li>
+      </ul>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-mobile-overlay" id="navOverlay"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="section-label">Your Fishing Diary</p>
+          <h1 class="hero-title">Fish <span>Tales<sup>™</sup></span></h1>
+          <p class="hero-tagline">You know how fish stories go — the fish gets a little bigger every time. With Fish Tales™, you've got the photo to prove it.</p>
+          <p class="hero-subtitle">Capture the moment. Log every detail. Analyze your catches. Share with your friends. Every catch has a story — Fish Tales™ keeps them all.</p>
+          <div class="store-buttons">
+            <a href="#download" class="store-btn">
+              <div>
+                <div class="store-btn-label">Download on the</div>
+                <div class="store-btn-name">App Store</div>
+              </div>
+            </a>
+            <a href="#download" class="store-btn">
+              <div>
+                <div class="store-btn-label">Get it on</div>
+                <div class="store-btn-name">Google Play</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-image-glow"></div>
+          <img src="images/screenshot-home.webp" alt="Fish Tales™ App" width="300" height="650" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- THE PROBLEM -->
+  <section id="problem" class="problem-section">
+    <div class="container">
+      <div class="problem-inner">
+        <div class="problem-text">
+          <p class="section-label">Sound Familiar?</p>
+          <h2 class="section-title">Remember That <span>Big One</span>?</h2>
+          <p class="problem-body">Remember that giant redfish from three years ago? What bait were you using? What tide? Where exactly were you? Now imagine trying to find the photo — scattered across your phone, your hard drive, a cloud backup you forgot about. Everywhere and nowhere.</p>
+          <p class="problem-body">With Fish Tales™, every catch comes with the full story attached. Species, size, bait, tide, location, notes — all linked to the photo, right in your pocket. Pull it up in seconds. Share it on the spot. Never lose a fish tale again.</p>
+        </div>
+        <div class="problem-stats">
+          <div class="problem-stat">
+            <div class="problem-stat-number">📸</div>
+            <div class="problem-stat-label">Photo + data together — never separated</div>
+          </div>
+          <div class="problem-stat">
+            <div class="problem-stat-number">⚡</div>
+            <div class="problem-stat-label">Pull up any catch in seconds</div>
+          </div>
+          <div class="problem-stat">
+            <div class="problem-stat-number">🔒</div>
+            <div class="problem-stat-label">Your spots stay private — always</div>
+          </div>
+          <div class="problem-stat">
+            <div class="problem-stat-number">♾️</div>
+            <div class="problem-stat-label">Catch data stored forever — never deleted</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">What You Get</p>
+        <h2 class="section-title">Capture. Log. Analyze. <span>Share.</span></h2>
+        <p class="section-subtitle">Everything you need to document your fishing life — beautifully, privately, and for free.</p>
+      </div>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">📷</div>
+          <div class="feature-title">Capture</div>
+          <p class="feature-desc">Tap the camera button right from the home screen. Take the photo, or import from your gallery. Fast, simple, built for the dock — not the desk.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <div class="feature-title">Log</div>
+          <p class="feature-desc">Record species, size, weight, bait, tide, fish hole, GPS, and notes. Quick mode logs in seconds. Detailed mode captures everything. Fill in the rest later from Trophy Wall.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <div class="feature-title">Analyze</div>
+          <p class="feature-desc">Reel Stats turns your catch history into intelligence. Top bait, best tide, hottest spots, personal records — all built automatically from your diary.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon share-icon-wrap">
+            <svg class="share-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="18" cy="5" r="3" stroke="#00E5FF" stroke-width="2"/>
+              <circle cx="6" cy="12" r="3" stroke="#00E5FF" stroke-width="2"/>
+              <circle cx="18" cy="19" r="3" stroke="#00E5FF" stroke-width="2"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" stroke="#00E5FF" stroke-width="2" stroke-linecap="round"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" stroke="#00E5FF" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="feature-title">Share</div>
+          <p class="feature-desc">Share catches with fishing friends privately inside the app, or send them anywhere — Instagram, Facebook, text, email — with one tap using your phone's native share sheet.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SCREENSHOTS CAROUSEL -->
+  <section id="screenshots">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">See It In Action</p>
+        <h2 class="section-title">Built for <span>Anglers</span></h2>
+        <p class="section-subtitle">A fishing diary that actually looks as good as the fish you catch.</p>
+      </div>
+      <div class="carousel-wrapper">
+        <button class="carousel-btn" aria-label="Scroll carousel left" onclick="scrollCarousel(-1)">&#8249;</button>
+        <div class="carousel-track" id="screenshotCarousel">
+
+          <div class="screenshot-item">
+            <img src="images/screenshot-home.webp" alt="Home Screen" width="240" />
+            <span class="screenshot-label">Home</span>
+            <p class="screenshot-desc">Your fishing diary opens here. Tap the camera to capture your catch or import from your gallery. Five stunning background scenes to make it yours.</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="images/screenshot-trophy.webp" alt="Trophy Wall" loading="lazy" width="240" />
+            <span class="screenshot-label">Trophy Wall</span>
+            <p class="screenshot-desc">Every catch beautifully displayed in your personal photo grid. Tap any catch to open the full detail view — photos, measurements, bait, location, and more.</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="images/screenshot-catch.webp" alt="Catch Detail" loading="lazy" width="240" />
+            <span class="screenshot-label">Catch Detail</span>
+            <p class="screenshot-desc">Tap any catch to see the full story. Scroll through multiple photos, view all logged data, and launch GPS coordinates directly in Google Maps.</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="images/screenshot-stats.webp" alt="Reel Stats" loading="lazy" width="240" />
+            <span class="screenshot-label">Reel Stats</span>
+            <p class="screenshot-desc">Your catches turned into intelligence. Top bait, best tide, hottest spots, personal records — all built automatically from your history.</p>
+          </div>
+
+          <div class="screenshot-item">
+            <img src="images/screenshot-friends.webp" alt="Friends Feed" loading="lazy" width="240" />
+            <span class="screenshot-label">Friends</span>
+            <p class="screenshot-desc">Share catches with your fishing friends privately. React with emojis, see their catches, relive the best days on the water together.</p>
+          </div>
+
+        </div>
+        <button class="carousel-btn" aria-label="Scroll carousel right" onclick="scrollCarousel(1)">&#8250;</button>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- REEL STATS -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stats-content">
+          <p class="section-label">Reel Stats</p>
+          <h2 class="section-title">Your Fishing History<br />Turned Into <span>Intelligence</span></h2>
+          <p class="stats-body">Most fishing apps tell you where to find fish. Fish Tales™ tells you where <em>you</em> find fish — based on your own history, your own spots, your own patterns.</p>
+          <p class="stats-body">The more detail you log, the more powerful your stats become. Tag your bait on every catch and Reel Stats shows you exactly which bait produces — not just "artificials work" but <strong>"Berkley Gulp! Alive Saltwater Swimming Mullet — 6 catches in April on incoming tide."</strong> That's guide-level data built from your own diary.</p>
+          <div class="stats-features">
+            <div class="stats-feature">
+              <span class="stats-feature-icon">🪝</span>
+              <div>
+                <strong>Bait Breakdown</strong>
+                <p>See exactly which baits produce. Your custom Bait Bucket makes it as granular as you want.</p>
+              </div>
+            </div>
+            <div class="stats-feature">
+              <span class="stats-feature-icon">📍</span>
+              <div>
+                <strong>Fish Hole Leaderboard</strong>
+                <p>Rank your private spots by catch count. Know which holes are actually producing.</p>
+              </div>
+            </div>
+            <div class="stats-feature">
+              <span class="stats-feature-icon">🔄</span>
+              <div>
+                <strong>Tide & Time of Day</strong>
+                <p>Discover your personal patterns — which tide stage and time of day puts fish on the hook.</p>
+              </div>
+            </div>
+            <div class="stats-feature">
+              <span class="stats-feature-icon">🏆</span>
+              <div>
+                <strong>Personal Records</strong>
+                <p>Longest fish, heaviest fish, most in a day — your records, per species, all time.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="stats-image">
+          <img src="images/screenshot-stats.webp" alt="Reel Stats" loading="lazy" width="280" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- LIFETIME -->
+  <section class="lifetime-section">
+    <div class="container">
+      <div class="lifetime-inner">
+        <p class="section-label">A Diary For Life</p>
+        <h2 class="lifetime-title">Imagine a Lifetime of <span>Fish Tales<sup>™</sup>.</span></h2>
+        <p class="lifetime-body">The longer you fish, the more powerful your diary becomes. Five years from now you'll know exactly which bait worked on incoming tide in April. Ten years from now you'll have patterns no forecast can predict.</p>
+        <p class="lifetime-body">Fish Tales™ grows with you. The data you log today becomes the patterns you fish by tomorrow. And the memories you capture now are the fish tales you'll tell forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PRIVACY -->
+  <section class="privacy-section">
+    <div class="container">
+      <div class="privacy-inner">
+        <div class="privacy-content">
+          <p class="section-label">Your Privacy</p>
+          <h2 class="section-title">Your Catches. Your Photos. <span>Your Data.</span></h2>
+          <p class="privacy-body">Everything you log in Fish Tales™ — your catches, your photos, your fish holes, your patterns — exists for one reason only: to power your experience in the app.</p>
+          <p class="privacy-body">We don't analyze your data to sell insights. We don't share your information with advertisers. We don't use your photos for any purpose beyond displaying them to you. There is no third-party tracking, no ad network, no data broker relationship of any kind.</p>
+          <p class="privacy-footer-line">Fish Tales™ is funded entirely by Pro subscriptions — not advertisers. Your diary is yours.</p>
+        </div>
+        <div class="privacy-pillars">
+          <div class="privacy-pillar">
+            <div class="privacy-pillar-icon">🚫</div>
+            <div class="privacy-pillar-text">
+              <strong>No ads. Ever.</strong>
+              <p>Not on Free. Not on Pro. Never.</p>
+            </div>
+          </div>
+          <div class="privacy-pillar">
+            <div class="privacy-pillar-icon">🔒</div>
+            <div class="privacy-pillar-text">
+              <strong>Your spots stay private. Always.</strong>
+              <p>Fish Holes never appear on any public map or database.</p>
+            </div>
+          </div>
+          <div class="privacy-pillar">
+            <div class="privacy-pillar-icon">📵</div>
+            <div class="privacy-pillar-text">
+              <strong>No third-party tracking.</strong>
+              <p>No analytics SDKs. No advertising identifiers. Nothing.</p>
+            </div>
+          </div>
+          <div class="privacy-pillar">
+            <div class="privacy-pillar-icon">🗑️</div>
+            <div class="privacy-pillar-text">
+              <strong>Delete and it's gone. Permanently.</strong>
+              <p>Delete your account and every byte of your data is removed from our systems.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Simple Pricing</p>
+        <h2 class="section-title">Free Forever. <span>Pro When You're Ready.</span></h2>
+        <p class="section-subtitle">Your catch data is never deleted — ever. Pro just opens the whole book.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="pricing-card">
+          <p class="pricing-plan">Free</p>
+          <div class="pricing-price">$0<span> / forever</span></div>
+          <p class="pricing-desc">Everything you need to start documenting your catches today.</p>
+          <ul class="pricing-features">
+            <li>Log unlimited catches — forever</li>
+            <li>1 photo per catch, stored for 1 year</li>
+            <li>Last 90 days on Trophy Wall & Reel Stats</li>
+            <li>Full Friends feed — share, react, get notified</li>
+            <li>Share internally with friends OR externally to social, email & more</li>
+            <li>Fish Box, Bait Bucket & Fish Holes — fully customizable</li>
+            <li>5 beautiful home scenes to choose from</li>
+            <li>Your catch data is never deleted — ever</li>
+            <li>No ads. Ever.</li>
+          </ul>
+        </div>
+
+        <div class="pricing-card pro">
+          <div class="pricing-badge">Most Popular</div>
+          <p class="pricing-plan">Pro</p>
+          <div class="pricing-price">$4.99<span> / month</span></div>
+          <p class="pricing-desc">$39.99/year — save 33%. Your complete fishing story, from day one.</p>
+          <ul class="pricing-features">
+            <li>Everything in Free, plus:</li>
+            <li>Up to 10 photos per catch — the full story, not just one shot</li>
+            <li>Complete Trophy Wall from your very first catch</li>
+            <li>Full Reel Stats history — spot patterns across every season</li>
+            <li>Date range filter on Trophy Wall</li>
+            <li>Export your complete history as CSV — your data, yours to keep</li>
+            <li>Photos protected for as long as you're a member</li>
+            <li>30-day grace period if you ever pause — nothing lost</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Questions</p>
+        <h2 class="section-title">Frequently <span>Asked</span></h2>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Is Fish Tales™ really free?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes — completely free to download and use. Log unlimited catches, use all the social and sharing features, and customize your Fish Box, Bait Bucket, and Fish Holes at no cost. Pro unlocks your full history, more photos per catch, and CSV export.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Can I customize my species, bait, and fishing spots?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely — and this is one of Fish Tales™'s most powerful features. Your Fish Box lets you build a custom species list organized by saltwater and freshwater. Your Bait Bucket lets you add any bait as specifically as you want — not just "Live Bait" but "Live Mullet" or "Berkley Gulp! Alive Saltwater Swimming Mullet." Your Fish Holes let you name and save your private spots. The more specific you log, the more powerful your Reel Stats become. All customization is free.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Will my catch data ever be deleted?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Never. Your catch records — species, size, bait, notes, date — are stored forever regardless of your plan. Free users see the last 90 days on Trophy Wall and Reel Stats. Upgrade to Pro and your full history appears instantly. Nothing is ever lost.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">What happens to my photos on the Free plan?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Free plan photos are stored for one year from the date of upload. Pro subscribers keep their photos for as long as their subscription is active. If you cancel Pro, you have a 30-day grace period before any photos are affected — and if you renew within that window, nothing is lost.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Do my catch photos stay on my phone?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes — Fish Tales™ includes an optional setting to automatically save every catch photo to your phone's native photo gallery at the time of upload. It's off by default but easy to turn on in Settings. Either way, your photos are always yours. You never have to choose between the app and your photo gallery.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Who can see my catches?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Only you — unless you choose to share. Catches you share internally are visible only to the specific friends you chose. There is no public feed, no browsing strangers' catches, and no way for anyone to see your data without your explicit action. Your Fish Holes are private named spots that never appear on any map or public database.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Is my location data private?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Absolutely. GPS is never captured automatically or in the background. You choose whether to attach a location to any specific catch by tapping the GPS button. Your Fish Holes are private named spots — never shared publicly. Location is only shared with friends you explicitly share a catch with, and only if you choose to include it.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How does sharing work?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Two ways. Internally — share a catch directly with connected friends inside Fish Tales™. You choose exactly which details to include: species, measurements, bait, location, and notes are all individually selectable. Externally — tap share and your phone's native share sheet opens every app you have: Instagram, Facebook, Messages, email, WhatsApp, and more. Both features are completely free.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Do you sell or share my data?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Never. Your data exists solely to power your experience in Fish Tales™. We do not sell it, share it with advertisers, or use it for any commercial purpose beyond running the app. The only third-party service we use is Supabase, which stores your data securely and has no independent use of it. You can read our full Privacy Policy for complete details.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">How does Reel Stats work?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Reel Stats builds automatically from everything you log. The more detail you add — bait, tide, fish hole, species — the richer your stats become. You'll see your top bait, best tide stage, most productive spots, best time of day, personal records per species, and your best month ever. The stats get smarter the more you fish.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Can I cancel Pro anytime?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Yes. Cancel anytime through your App Store or Google Play subscription settings. You keep Pro access until the end of your billing period, then have a 30-day grace period before any changes to your photo storage. Renew within that window and nothing changes — full history and all photos restored instantly.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Can I export my catch history?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">Pro subscribers can export their complete catch history as a CSV file from the Settings screen — every catch, every detail, yours to keep. Your data belongs to you.</div></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">Does Fish Tales™ have ads?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+          <div class="faq-answer"><div class="faq-answer-inner">No. Fish Tales™ has no ads on any plan — Free or Pro. We are funded entirely by Pro subscriptions. Your fishing diary is a space to think, not a billboard.</div></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- CTA -->
+  <section id="download" class="cta-section">
+    <div class="container">
+      <p class="section-label">Ready to Start?</p>
+      <h2 class="cta-title">Every Fish Has a <span>Story.</span><br />Start Telling Yours.</h2>
+      <p class="cta-subtitle">Free to download. Free to use. Your fishing diary for life.</p>
+      <div class="store-buttons store-buttons-centered">
+        <a href="#" class="store-btn">
+          <div>
+            <div class="store-btn-label">Download on the</div>
+            <div class="store-btn-name">App Store</div>
+          </div>
+        </a>
+        <a href="#" class="store-btn">
+          <div>
+            <div class="store-btn-label">Get it on</div>
+            <div class="store-btn-name">Google Play</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-brand">
+        <img src="images/icon-cyan.webp" alt="Fish Tales™" class="footer-icon" loading="lazy" />
+        <span class="footer-brand-name">Fish <span class="footer-brand-tales">Tales</span><sup>™</sup></span>
+      </div>
+      <div class="footer-inner">
+        <p class="footer-copy">© <span id="footer-year"></span> ClearCrest Logic, LLC. Fish Tales™ is a trademark of ClearCrest Logic, LLC. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- No JavaScript fallback -->
+  <noscript>
+    <div style="background:#001B2E;color:#fff;font-family:sans-serif;text-align:center;padding:20px;">
+      Fish Tales™ works best with JavaScript enabled. Please enable it in your browser settings.
+    </div>
+  </noscript>
+
+  <script>
+    // Auto-update copyright year
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // Hamburger menu
+    const hamburger = document.getElementById('navHamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const overlay   = document.getElementById('navOverlay');
+
+    function openMenu() {
+      navLinks.classList.add('open');
+      overlay.classList.add('open');
+      hamburger.classList.add('open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      hamburger.setAttribute('aria-label', 'Close navigation menu');
+    }
+
+    function closeMenu() {
+      navLinks.classList.remove('open');
+      overlay.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
+    }
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.contains('open') ? closeMenu() : openMenu();
+    });
+
+    overlay.addEventListener('click', closeMenu);
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Carousel scroll
+    function scrollCarousel(dir) {
+      const track = document.getElementById('screenshotCarousel');
+      const itemWidth = track.querySelector('.screenshot-item').offsetWidth + 24;
+      track.scrollBy({ left: dir * itemWidth, behavior: 'smooth' });
+    }
+
+    // FAQ accordion — with aria-expanded for accessibility
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
