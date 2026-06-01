@@ -133,7 +133,7 @@
 
   <hr class="divider" />
 
-  <!-- SCREENSHOTS CAROUSEL (Moved up for quick validation) -->
+  <!-- SCREENSHOTS CAROUSEL -->
   <section id="screenshots">
     <div class="container">
       <div class="section-header">
@@ -183,7 +183,7 @@
 
   <hr class="divider" />
 
-  <!-- REEL STATS (Core Utility Value Proposition) -->
+  <!-- REEL STATS -->
   <section id="stats" class="stats-section">
     <div class="container">
       <div class="stats-inner">
@@ -256,7 +256,7 @@
 
   <hr class="divider" />
 
-  <!-- THE PROBLEM / THE DIARY PILLAR (Emotional Sentiment & Centralization Value) -->
+  <!-- THE PROBLEM / THE DIARY PILLAR -->
   <section id="problem" class="problem-section">
     <div class="container">
       <div class="problem-inner">
@@ -290,7 +290,7 @@
 
   <hr class="divider" />
 
-  <!-- HIGH LEVEL UTILITY SUMMARY OVERVIEW -->
+  <!-- FEATURES GRID -->
   <section id="features">
     <div class="container">
       <div class="section-header">
@@ -351,7 +351,7 @@
 
   <hr class="divider" />
 
-  <!-- PRIVACY (Aggressive Defensive Positioning) -->
+  <!-- PRIVACY -->
   <section id="privacy" class="privacy-section">
     <div class="container">
       <div class="privacy-inner">
@@ -378,7 +378,7 @@
             </div>
           </div>
           <div class="privacy-pillar">
-            <div class="privacy-pillar-icon">📵</div>
+            <div class="privacy-pillar-icon"></div>
             <div class="privacy-pillar-text">
               <strong>No Third-Party Brokers</strong>
               <p>Zero user tracking scripts are embedded inside your mobile package.</p>
@@ -398,7 +398,7 @@
 
   <hr class="divider" />
 
-  <!-- PRICING (Optimized Free/Pro Messaging) -->
+  <!-- PRICING -->
   <section id="pricing">
     <div class="container">
       <div class="section-header">
@@ -446,33 +446,72 @@
 
   <hr class="divider" />
 
-  <!-- FAQ -->
+  <!-- FAQ SECTION WITH CATEGORY TABS -->
   <section id="faq">
     <div class="container">
       <div class="section-header">
         <p class="section-label">Questions</p>
         <h2 class="section-title">Frequently <span>Asked</span></h2>
       </div>
-      <div class="faq-list">
 
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Is Fish Tales™ really free?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">Yes. You can track unlimited text catches, customize species, configure your bait setup, and view live 90-day tracking summaries completely free. Pro tier simply upgrades cloud image storage thresholds and full lifetime history tools.</div></div>
+      <!-- Tab Selection Controls -->
+      <div class="faq-tabs">
+        <button class="faq-tab-btn active" onclick="switchFaqTab('basics')">Basics & Logging</button>
+        <button class="faq-tab-btn" onclick="switchFaqTab('storage')">Storage & Pricing</button>
+        <button class="faq-tab-btn" onclick="switchFaqTab('privacy-tab')">Privacy & Sharing</button>
+      </div>
+
+      <!-- Tab Content Area -->
+      <div class="faq-tabs-container">
+        
+        <!-- Category 1: Basics & Logging -->
+        <div id="faq-basics" class="faq-tab-content active">
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Is Fish Tales™ really free?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+              <div class="faq-answer"><div class="faq-answer-inner">Yes. You can track unlimited text catches, customize species, configure your bait setup, and view live 90-day tracking summaries completely free. Pro tier simply upgrades cloud image storage thresholds and full lifetime history tools.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Does the app work without cellular service?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+              <div class="faq-answer"><div class="faq-answer-inner">Yes. You can snap photos and log catch data completely offline while out on the water. The app stores everything safely on your device and automatically syncs to the cloud once you return to cell coverage or Wi-Fi.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I edit my logs after saving them?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+              <div class="faq-answer"><div class="faq-answer-inner">Yes, you can edit any part of your catch logs at any time, including updating photos, weights, bait choices, or location notes if you need to refine them later.</div></div>
+            </div>
+          </div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Will my catch data ever be deleted?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">Never. Your primary logged text records—including date fields, weight, species, and selected gear notes—are kept permanently. Free users view a rolling 90 days of patterns. Upgrading to Pro unlocks access to your entire historical archive instantly without data loss.</div></div>
+        <!-- Category 2: Storage & Pricing -->
+        <div id="faq-storage" class="faq-tab-content">
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Will my catch data ever be deleted?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+              <div class="faq-answer"><div class="faq-answer-inner">Never. Your primary logged text records—including date fields, weight, species, and selected gear notes—are kept permanently. Free users view a rolling 90 days of patterns. Upgrading to Pro unlocks access to your entire historical archive instantly without data loss.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">What happens to my photos on the Free plan?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+              <div class="faq-answer"><div class="faq-answer-inner">Free accounts receive 1 full year of continuous cloud hosting for each catch image from the upload date. Pro tiers remove all time limits entirely, keeping every image file accessible for as long as your premium membership remains active.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">How do I export my data?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+              <div class="faq-answer"><div class="faq-answer-inner">Pro tier users can export their entire catch history at any time as a standard CSV spreadsheet file, allowing you to view or analyze your data in Excel or other external tools.</div></div>
+            </div>
+          </div>
         </div>
 
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">What happens to my photos on the Free plan?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">Free accounts receive 1 full year of continuous cloud hosting for each catch image from the upload date. Pro tiers remove all time limits entirely, keeping every image file accessible for as long as your premium membership remains active.</div></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">Are my fishing locations kept private?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
-          <div class="faq-answer"><div class="faq-answer-inner">Absolutely. GPS details are never gathered in background streams. You choose exactly when to drop location parameters. Your named fishing spots exist on private encrypted accounts and never feed global exploration tables or public maps.</div></div>
+        <!-- Category 3: Privacy & Sharing -->
+        <div id="faq-privacy-tab" class="faq-tab-content">
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Are my fishing locations kept private?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+              <div class="faq-answer"><div class="faq-answer-inner">Absolutely. GPS details are never gathered in background streams. You choose exactly when to drop location parameters. Your named fishing spots exist on private encrypted accounts and never feed global exploration tables or public maps.</div></div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">Can I share my catches with friends?<span class="faq-chevron"><svg viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+              <div class="faq-answer"><div class="faq-answer-inner">Yes. You can add friends within the app to share your catches privately. You have full control over what details they can see, such as showing off the fish size but keeping the exact location hidden.</div></div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -569,20 +608,50 @@
       track.scrollBy({ left: dir * itemWidth, behavior: 'smooth' });
     }
 
+    // Dynamic Accordion Trigger
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
         const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => {
+        
+        // Target only questions inside the currently active tab view
+        const currentTab = btn.closest('.faq-tab-content');
+        currentTab.querySelectorAll('.faq-item').forEach(i => {
           i.classList.remove('open');
           i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
         });
+        
         if (!isOpen) {
           item.classList.add('open');
           btn.setAttribute('aria-expanded', 'true');
         }
       });
     });
+
+    // Dynamic Tab Swapper Script
+    function switchFaqTab(tabId) {
+      // Deactivate all button highlights
+      document.querySelectorAll('.faq-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      // Deactivate all visible lists
+      document.querySelectorAll('.faq-tab-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      // Target active tab components
+      const activeContent = document.getElementById('faq-' + tabId);
+      
+      // Collapse any lingering opened accordions when switching panels
+      activeContent.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      // Highlight target layout components
+      activeContent.classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
   </script>
 </body>
 </html>
