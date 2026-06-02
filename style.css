@@ -1185,3 +1185,138 @@ footer {
 .faq-tab-content.active {
   display: block;
 }
+
+/* ============================================
+   REEL STATS — TAB SWITCHER
+   ============================================ */
+
+   .stats-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+  
+  .stats-tab-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--text-muted);
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 11px 28px;
+    border-radius: 99px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+  }
+  
+  .stats-tab-btn:hover {
+    background: rgba(255,255,255,0.09);
+    color: var(--white);
+  }
+  
+  .stats-tab-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+  }
+  
+  .stats-tab-content {
+    display: none;
+  }
+  
+  .stats-tab-content.active {
+    display: block;
+  }
+  
+  /* ============================================
+     REEL STATS — WHAT YOU GET TAB
+     ============================================ */
+  
+  .stats-wyg-header {
+    text-align: center;
+    margin-bottom: 44px;
+  }
+  
+  .stats-wyg-subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-top: 12px;
+    line-height: 1.7;
+  }
+  
+  .stats-wyg-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  
+  .stats-wyg-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 22px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  
+  .stats-wyg-card:hover {
+    border-color: var(--accent-border);
+    background: rgba(0,229,255,0.04);
+  }
+  
+  .stats-wyg-card--accent {
+    border-color: rgba(255,179,71,0.25);
+    background: rgba(255,179,71,0.04);
+  }
+  
+  .stats-wyg-card--accent:hover {
+    border-color: rgba(255,179,71,0.45);
+    background: rgba(255,179,71,0.07);
+  }
+  
+  .stats-wyg-icon {
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+    width: 26px;
+    text-align: center;
+  }
+  
+  .stats-wyg-body strong {
+    display: block;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.3;
+  }
+  
+  .stats-wyg-body p {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.65;
+    margin: 0;
+  }
+  
+  /* Responsive — wyg grid */
+  @media (max-width: 1000px) {
+    .stats-wyg-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  
+  @media (max-width: 768px) {
+    .stats-wyg-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-wyg-card { padding: 18px 14px; }
+  }
+  
+  @media (max-width: 480px) {
+    .stats-wyg-grid { grid-template-columns: 1fr; }
+    .stats-tabs { gap: 8px; }
+    .stats-tab-btn { font-size: 12px; padding: 10px 20px; }
+  }
+  

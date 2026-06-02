@@ -183,53 +183,188 @@
 
   <hr class="divider" />
 
-  <!-- REEL STATS -->
-  <section id="stats" class="stats-section">
-    <div class="container">
-      <div class="stats-inner">
-        <div class="stats-content">
-          <p class="section-label">Performance Analytics</p>
-          <h2 class="section-title">Stop Guessing. Know Exactly <span>What Works.</span></h2>
-          <p class="stats-body">Most fishing apps showcase public spots to crowds. Fish Tales™ evaluates your distinct fishing logs, your private locations, and your successful historical baits to establish specific local patterns.</p>
-          <p class="stats-body">By tracking bait settings accurately, Reel Stats maps outputs with extreme precision. You bypass basic categories to observe: <strong>"Berkley Gulp! Alive Saltwater Swimming Mullet — 6 catches in April on incoming tide."</strong> This gives you guide-level tracking tools generated right from your history.</p>
-          
-          <div class="stats-features">
-            <div class="stats-feature">
-              <span class="stats-feature-icon">🪝</span>
-              <div>
-                <strong>Custom Bait Tracker</strong>
-                <p>Track which soft plastics, hard baits, or live configurations create consistent hookups.</p>
+    <!-- REEL STATS -->
+    <section id="stats" class="stats-section">
+      <div class="container">
+  
+        <!-- Tab Controls -->
+        <div class="stats-tabs">
+          <button class="stats-tab-btn active" onclick="switchStatsTab('what-it-does')" aria-pressed="true">What It Does</button>
+          <button class="stats-tab-btn" onclick="switchStatsTab('what-you-get')" aria-pressed="false">What You Get</button>
+        </div>
+  
+        <!-- Tab 1: Original "What It Does" content -->
+        <div id="stats-what-it-does" class="stats-tab-content active">
+          <div class="stats-inner">
+            <div class="stats-content">
+              <p class="section-label">Performance Analytics</p>
+              <h2 class="section-title">Stop Guessing. Know Exactly <span>What Works.</span></h2>
+              <p class="stats-body">Most fishing apps showcase public spots to crowds. Fish Tales™ evaluates your distinct fishing logs, your private locations, and your successful historical baits to establish specific local patterns.</p>
+              <p class="stats-body">By tracking bait settings accurately, Reel Stats maps outputs with extreme precision. You bypass basic categories to observe: <strong>Berkley Gulp! Alive Saltwater Swimming Mullet — 6 catches in April on incoming tide.</strong> This gives you guide-level tracking tools generated right from your history.</p>
+              
+              <div class="stats-features">
+                <div class="stats-feature">
+                  <span class="stats-feature-icon">🪝</span>
+                  <div>
+                    <strong>Custom Bait Tracker</strong>
+                    <p>Track which soft plastics, hard baits, or live configurations create consistent hookups.</p>
+                  </div>
+                </div>
+                <div class="stats-feature">
+                  <span class="stats-feature-icon">📍</span>
+                  <div>
+                    <strong>Fish Hole Leaderboards</strong>
+                    <p>Rank your spots safely based on total productivity data. Know exactly where to run first.</p>
+                  </div>
+                </div>
+                <div class="stats-feature">
+                  <span class="stats-feature-icon">🔄</span>
+                  <div>
+                    <strong>Tidal & Temporal Alignment</strong>
+                    <p>Identify optimal bite times by comparing lunar tide stages directly alongside historical notes.</p>
+                  </div>
+                </div>
+                <div class="stats-feature">
+                  <span class="stats-feature-icon">🏆</span>
+                  <div>
+                    <strong>Personal Benchmarks</strong>
+                    <p>Archive weight metrics, record lengths, and daily target numbers across individual fish species.</p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="stats-feature">
-              <span class="stats-feature-icon">📍</span>
-              <div>
-                <strong>Fish Hole Leaderboards</strong>
-                <p>Rank your spots safely based on total productivity data. Know exactly where to run first.</p>
-              </div>
-            </div>
-            <div class="stats-feature">
-              <span class="stats-feature-icon">🔄</span>
-              <div>
-                <strong>Tidal & Temporal Alignment</strong>
-                <p>Identify optimal bite times by comparing lunar tide stages directly alongside historical notes.</p>
-              </div>
-            </div>
-            <div class="stats-feature">
-              <span class="stats-feature-icon">🏆</span>
-              <div>
-                <strong>Personal Benchmarks</strong>
-                <p>Archive weight metrics, record lengths, and daily target numbers across individual fish species.</p>
-              </div>
+            <div class="stats-image">
+              <img src="images/screenshot-stats.webp" alt="Reel Stats Intelligence Graph" loading="lazy" width="280" />
             </div>
           </div>
         </div>
-        <div class="stats-image">
-          <img src="images/screenshot-stats.webp" alt="Reel Stats Intelligence Graph" loading="lazy" width="280" />
+  
+        <!-- Tab 2: "What You Get" stat grid -->
+        <div id="stats-what-you-get" class="stats-tab-content">
+          <div class="stats-wyg-header">
+            <p class="section-label">Performance Analytics</p>
+            <h2 class="section-title">14 Stats. All <span>Yours.</span></h2>
+            <p class="stats-wyg-subtitle">Every insight Reel Stats surfaces — automatically computed from your catch history.</p>
+          </div>
+          <div class="stats-wyg-grid">
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">📊</div>
+              <div class="stats-wyg-body">
+                <strong>Catch Overview</strong>
+                <p>Total catches and unique species count for any date window you select.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">🏆</div>
+              <div class="stats-wyg-body">
+                <strong>Personal Records</strong>
+                <p>Your longest and heaviest fish ever — with tie detection across your entire history.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">📅</div>
+              <div class="stats-wyg-body">
+                <strong>Best Day</strong>
+                <p>The single day you landed the most fish, with photo thumbnails of each catch.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">📈</div>
+              <div class="stats-wyg-body">
+                <strong>Catch Rate Trend</strong>
+                <p>Last 3 months vs. the prior 3 months — see if your fishing is trending up or down.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">🔥</div>
+              <div class="stats-wyg-body">
+                <strong>Monthly Streak</strong>
+                <p>Current consecutive-month fishing streak and your all-time best streak.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">📆</div>
+              <div class="stats-wyg-body">
+                <strong>Most Active Month</strong>
+                <p>Your highest-catch calendar month with the top species you caught that month.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">🐟</div>
+              <div class="stats-wyg-body">
+                <strong>Species Breakdown</strong>
+                <p>Donut chart showing every species you've caught with count and percentage share.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">📍</div>
+              <div class="stats-wyg-body">
+                <strong>Top Spots</strong>
+                <p>Bar chart ranking your named locations by total catch count.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">🪝</div>
+              <div class="stats-wyg-body">
+                <strong>Bait Performance</strong>
+                <p>Every bait ranked by how many fish it produced — down to the specific brand and rig.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">🌊</div>
+              <div class="stats-wyg-body">
+                <strong>Tide Breakdown</strong>
+                <p>Catch distribution across High, Low, Slack, Incoming, and Outgoing tide stages.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">📏</div>
+              <div class="stats-wyg-body">
+                <strong>Species Records</strong>
+                <p>Per-species personal bests for length and weight. Sortable, with saltwater and freshwater tabs.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">🗺️</div>
+              <div class="stats-wyg-body">
+                <strong>Fish Hole Leaderboard</strong>
+                <p>Your private holes ranked by productivity. The top spot for each is highlighted instantly.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card">
+              <div class="stats-wyg-icon">🎣</div>
+              <div class="stats-wyg-body">
+                <strong>Last Cast</strong>
+                <p>Exactly how long ago your last catch was, with the species and hole it came from.</p>
+              </div>
+            </div>
+  
+            <div class="stats-wyg-card stats-wyg-card--accent">
+              <div class="stats-wyg-icon">⚠️</div>
+              <div class="stats-wyg-body">
+                <strong>Missing Data Entries</strong>
+                <p>Catches with incomplete logs flagged so you can fill them in and sharpen every other stat.</p>
+              </div>
+            </div>
+  
+          </div>
         </div>
+  
       </div>
-    </div>
-  </section>
+    </section>
 
   <hr class="divider" />
 
@@ -651,6 +786,19 @@
       // Highlight target layout components
       activeContent.classList.add('active');
       event.currentTarget.classList.add('active');
+    }
+        // Reel Stats tab switcher
+        function switchStatsTab(tabId) {
+      document.querySelectorAll('.stats-tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
+      });
+      document.querySelectorAll('.stats-tab-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      document.getElementById('stats-' + tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+      event.currentTarget.setAttribute('aria-pressed', 'true');
     }
   </script>
 </body>
