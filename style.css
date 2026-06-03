@@ -1088,25 +1088,7 @@ footer {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-  
 }
-/* --- Mid-Page CTA Section --- */
-.mid-cta-section {
-  padding: 48px 0;
-  background: radial-gradient(circle at center, rgba(0,229,255,0.05) 0%, transparent 70%);
-  text-align: center;
-}
-
-.mid-cta-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: 24px;
-  letter-spacing: 0.5px;
-}
-
-.text-center { text-align: center; }
-
 /* --- Mid-Page CTA Section --- */
 .mid-cta-section {
   padding: 48px 0;
@@ -1173,9 +1155,9 @@ footer {
 }
 
 .faq-tab-btn.active {
-  background: var(--cyan);
-  border-color: var(--cyan);
-  color: var(--bg-dark);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
 }
 
 .faq-tab-content {

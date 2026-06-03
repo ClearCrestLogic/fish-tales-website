@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Fish Tales — Confirming your account...</title>
+  <title>Fish Tales™ — Confirming your account...</title>
   <meta name="robots" content="noindex, nofollow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Montserrat — matches the rest of the site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       background-color: #001B2E;
       color: white;
-      font-family: Montserrat, sans-serif;
+      font-family: 'Montserrat', sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -23,10 +27,12 @@
   </style>
 </head>
 <body>
-  <div>
-    <p>Confirming your account...<br>Opening Fish Tales.</p>
-    <p id="fallback" style="display:none; font-size:14px; opacity:0.55; margin-top:16px;">If the app didn't open, please open Fish Tales manually and sign in.</p>
-  </div>
+  <main>
+    <div>
+      <p>Confirming your account...<br>Opening Fish Tales.</p>
+      <p id="fallback" style="display:none; font-size:14px; opacity:0.55; margin-top:16px;">If the app didn't open, please open Fish Tales manually and sign in.</p>
+    </div>
+  </main>
   <script>
     // Grab the full query string and fragment from the confirmation link
     const hash = window.location.hash;

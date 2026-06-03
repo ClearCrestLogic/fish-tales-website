@@ -28,7 +28,8 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-  <meta name="apple-itunes-app" content="app-id=PLACEHOLDER" />
+  <!-- Apple Smart Banner — uncomment and replace PLACEHOLDER with real App Store ID after submission -->
+  <!-- <meta name="apple-itunes-app" content="app-id=PLACEHOLDER" /> -->
 
   <script type="application/ld+json">
   {
@@ -66,7 +67,7 @@
 </head>
 <body>
 
-  <a href="#screenshots" class="skip-nav">Skip to main content</a>
+  <a href="#main-content" class="skip-nav">Skip to main content</a>
 
   <!-- NAV -->
   <nav>
@@ -93,7 +94,7 @@
 
   <div class="nav-mobile-overlay" id="navOverlay"></div>
 
-  <!-- HERO -->
+  <main id="main-content">
   <section class="hero">
     <div class="container">
       <div class="hero-inner">
@@ -189,8 +190,8 @@
   
         <!-- Tab Controls -->
         <div class="stats-tabs">
-          <button class="stats-tab-btn active" onclick="switchStatsTab('what-it-does')" aria-pressed="true">What It Does</button>
-          <button class="stats-tab-btn" onclick="switchStatsTab('what-you-get')" aria-pressed="false">What You Get</button>
+          <button class="stats-tab-btn active" onclick="switchStatsTab(event, 'what-it-does')" aria-pressed="true">What It Does</button>
+          <button class="stats-tab-btn" onclick="switchStatsTab(event, 'what-you-get')" aria-pressed="false">What You Get</button>
         </div>
   
         <!-- Tab 1: Original "What It Does" content -->
@@ -513,7 +514,7 @@
             </div>
           </div>
           <div class="privacy-pillar">
-            <div class="privacy-pillar-icon"></div>
+            <div class="privacy-pillar-icon">🚷</div>
             <div class="privacy-pillar-text">
               <strong>No Third-Party Brokers</strong>
               <p>Zero user tracking scripts are embedded inside your mobile package.</p>
@@ -591,9 +592,9 @@
 
       <!-- Tab Selection Controls -->
       <div class="faq-tabs">
-        <button class="faq-tab-btn active" onclick="switchFaqTab('basics')">Basics & Logging</button>
-        <button class="faq-tab-btn" onclick="switchFaqTab('storage')">Storage & Pricing</button>
-        <button class="faq-tab-btn" onclick="switchFaqTab('privacy-tab')">Privacy & Sharing</button>
+        <button class="faq-tab-btn active" onclick="switchFaqTab(event, 'basics')">Basics & Logging</button>
+        <button class="faq-tab-btn" onclick="switchFaqTab(event, 'storage')">Storage & Pricing</button>
+        <button class="faq-tab-btn" onclick="switchFaqTab(event, 'privacy-tab')">Privacy & Sharing</button>
       </div>
 
       <!-- Tab Content Area -->
@@ -662,7 +663,7 @@
       <h2 class="cta-title">Every Fish Has a Story.<br />Start Recording <span>Yours Today.</span></h2>
       <p class="cta-subtitle">Available for iOS and Android devices. Your private legacy tracker awaits.</p>
       <div class="store-buttons store-buttons-centered">
-        <a href="#" class="store-btn" target="_blank" rel="noopener">
+        <a href="#download" class="store-btn" target="_blank" rel="noopener">
           <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
             <path d="M18.71,19.5C17.88,20.74,17,21.95,15.66,22c-1.34,0-1.76-.82-3.31-.82s-2,.79-3.32,.84C7.7,22,6.75,20.7,5.92,19.5,4.22,17,2.92,12.43,4.67,9.39A4.49,4.49,0,0,1,8.15,7.19c1.33,0,2.58,.92,3.4,1,.82,0,2.34-1.11,3.94-.95a4.34,4.34,0,0,1,3.41,1.9C15.56,11.23,15.42,15.22,18.71,16.5A4.32,4.32,0,0,0,18.71,19.5ZM15.94,4.17A4.27,4.27,0,0,0,17,1.19a4.39,4.39,0,0,0-2.85,1.48,4,4,0,0,0-1.08,2.9A3.68,3.68,0,0,0,15.94,4.17Z"/>
           </svg>
@@ -671,7 +672,7 @@
             <div class="store-btn-name">App Store</div>
           </div>
         </a>
-        <a href="#" class="store-btn" target="_blank" rel="noopener">
+        <a href="#download" class="store-btn" target="_blank" rel="noopener">
           <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
             <path d="M5,3.14a1.85,1.85,0,0,0-.46,1.29V19.57A1.85,1.85,0,0,0,5,20.86l8.47-8.47ZM14.6,11.26,17.45,8.4,6.2,2a1.45,1.45,0,0,0-1,.1ZM14.6,12.74,5.2,21.9a1.45,1.45,0,0,0,1,.1l11.25-6.4ZM18.59,12l-3-3L14.47,12l1.13,1.13,3-3A1.48,1.48,0,0,0,18.59,12Z"/>
           </svg>
@@ -683,6 +684,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -764,7 +767,7 @@
     });
 
     // Dynamic Tab Swapper Script
-    function switchFaqTab(tabId) {
+    function switchFaqTab(event, tabId) {
       // Deactivate all button highlights
       document.querySelectorAll('.faq-tab-btn').forEach(btn => {
         btn.classList.remove('active');
@@ -787,8 +790,8 @@
       activeContent.classList.add('active');
       event.currentTarget.classList.add('active');
     }
-        // Reel Stats tab switcher
-        function switchStatsTab(tabId) {
+    // Reel Stats tab switcher
+    function switchStatsTab(event, tabId) {
       document.querySelectorAll('.stats-tab-btn').forEach(btn => {
         btn.classList.remove('active');
         btn.setAttribute('aria-pressed', 'false');
