@@ -126,7 +126,7 @@
         </div>
         <div class="hero-image">
           <div class="hero-image-glow"></div>
-          <img src="images/screenshot-home.webp" alt="Fish Tales™ App Home Screen" width="300" height="650" />
+          <img src="images/screenshot-home.webp" alt="Fish Tales™ App Home Screen" width="300" height="650" class="lightbox-trigger" data-src="images/screenshot-home.webp" />
         </div>
       </div>
     </div>
@@ -147,31 +147,31 @@
         <div class="carousel-track" id="screenshotCarousel">
 
           <div class="screenshot-item">
-            <img src="images/screenshot-home.webp" alt="Home Screen Dashboard" width="240" />
+            <img src="images/screenshot-home.webp" alt="Home Screen Dashboard" width="240" class="lightbox-trigger" data-src="images/screenshot-home.webp" />
             <span class="screenshot-label">Home</span>
             <p class="screenshot-desc">Tap the camera to capture a catch immediately or import later from your native phone gallery.</p>
           </div>
 
           <div class="screenshot-item">
-            <img src="images/screenshot-stats.webp" alt="Reel Stats Dashboard" loading="lazy" width="240" />
+            <img src="images/screenshot-stats.webp" alt="Reel Stats Dashboard" loading="lazy" width="240" class="lightbox-trigger" data-src="images/screenshot-stats.webp" />
             <span class="screenshot-label">Reel Stats</span>
             <p class="screenshot-desc">Your personal pattern center. Automatically sorts your history into active target indicators.</p>
           </div>
 
           <div class="screenshot-item">
-            <img src="images/screenshot-trophy.webp" alt="Trophy Wall Interface" loading="lazy" width="240" />
+            <img src="images/screenshot-trophy.webp" alt="Trophy Wall Interface" loading="lazy" width="240" class="lightbox-trigger" data-src="images/screenshot-trophy.webp" />
             <span class="screenshot-label">Trophy Wall</span>
             <p class="screenshot-desc">Your fishing history beautifully mapped out in a clean, scrollable visual scrapbook layout.</p>
           </div>
 
           <div class="screenshot-item">
-            <img src="images/screenshot-catch.webp" alt="Detailed Catch Entry View" loading="lazy" width="240" />
+            <img src="images/screenshot-catch.webp" alt="Detailed Catch Entry View" loading="lazy" width="240" class="lightbox-trigger" data-src="images/screenshot-catch.webp" />
             <span class="screenshot-label">Catch Detail</span>
             <p class="screenshot-desc">View measurements, full bait selections, tidal patterns, and map out paths instantly.</p>
           </div>
 
           <div class="screenshot-item">
-            <img src="images/screenshot-friends.webp" alt="Private Friends Social Feed" loading="lazy" width="240" />
+            <img src="images/screenshot-friends.webp" alt="Private Friends Social Feed" loading="lazy" width="240" class="lightbox-trigger" data-src="images/screenshot-friends.webp" />
             <span class="screenshot-label">Friends</span>
             <p class="screenshot-desc">Share selected records with close fishing partners securely without public database exposure.</p>
           </div>
@@ -235,7 +235,7 @@
               </div>
             </div>
             <div class="stats-image">
-              <img src="images/screenshot-stats.webp" alt="Reel Stats Intelligence Graph" loading="lazy" width="280" />
+              <img src="images/screenshot-stats.webp" alt="Reel Stats Intelligence Graph" loading="lazy" width="280" class="lightbox-trigger" data-src="images/screenshot-stats.webp" />
             </div>
           </div>
         </div>
@@ -812,5 +812,47 @@
       event.currentTarget.setAttribute('aria-pressed', 'true');
     }
   </script>
+  <!-- SCREENSHOT LIGHTBOX OVERLAY -->
+  <div id="screenshotLightbox" role="dialog" aria-modal="true" aria-label="Screenshot preview">
+    <button id="lightboxClose" aria-label="Close preview">&#x2715;</button>
+    <img id="lightboxImg" src="" alt="App screenshot" />
+  </div>
+
+  <script>
+    // Lightbox
+    const lightbox     = document.getElementById('screenshotLightbox');
+    const lightboxImg  = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || 'App screenshot';
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+      lightboxImg.src = '';
+    }
+
+    document.querySelectorAll('.lightbox-trigger').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.dataset.src, img.alt));
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    // Tap backdrop to close
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Escape key to close
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+
 </body>
 </html>
